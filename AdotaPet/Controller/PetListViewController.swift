@@ -58,4 +58,5 @@ class PetListViewController: UIViewController, UICollectionViewDataSource {
     func setupViewLocationBorder() {
         viewLocation.layer.cornerRadius = 20
     }
+    
 }

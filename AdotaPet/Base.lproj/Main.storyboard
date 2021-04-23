@@ -220,9 +220,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zre-Fj-W3B">
                                         <rect key="frame" x="269" y="60" width="75" height="20"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tim-Mn-ESy">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tim-Mn-ESy">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                                <color key="backgroundColor" red="0.0" green="0.54901960780000003" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="EOD-EU-sFE"/>
                                                     <constraint firstAttribute="height" constant="20" id="u2g-No-UFT"/>
@@ -279,6 +278,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8N-MQ-U0i">
                                         <rect key="frame" x="78" y="0.0" width="200" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.77689156707676565" blue="0.19989790448803613" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="NsP-fh-FqS"/>
                                             <constraint firstAttribute="width" constant="200" id="gYq-3A-YnH"/>
@@ -313,6 +313,16 @@
                             <constraint firstItem="39N-ta-y4M" firstAttribute="trailing" secondItem="0G3-0C-lFE" secondAttribute="trailing" constant="20" id="zZb-MJ-ysY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="petAdoption" destination="Q8N-MQ-U0i" id="e3y-PW-dOJ"/>
+                        <outlet property="petAge" destination="tKG-7I-U7R" id="a6S-Hf-F3k"/>
+                        <outlet property="petBreed" destination="LUH-MW-FXf" id="mpf-3O-o5z"/>
+                        <outlet property="petDescription" destination="0G3-0C-lFE" id="Dkq-BL-No6"/>
+                        <outlet property="petGenreIcon" destination="LYk-If-t2j" id="N3K-5N-b9K"/>
+                        <outlet property="petMainInformationBox" destination="ow9-AD-2DX" id="IhW-H3-y8F"/>
+                        <outlet property="petName" destination="mEY-BW-ZC7" id="5XZ-Bm-ifQ"/>
+                        <outlet property="petPhoto" destination="vod-cE-m5W" id="gXO-8O-3db"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RnM-77-Tz5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
