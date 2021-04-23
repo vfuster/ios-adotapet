@@ -29,8 +29,18 @@ class PetDescriptionViewController: UIViewController {
     }
     
     func setup() {
+        
+        let formatterPet = PetAgeFormatter()
+        let formatterGenre = PetGenreFormatter()
+        
         if let pet = selectedPet {
             self.petName.text = pet.name
+            self.petPhoto.image = UIImage(named: pet.photoPath)
+            self.petBreed.text = pet.breed
+            self.petDescription.text = pet.description
+            self.petAge.text = formatterPet.formattedAge(ageInMonths: pet.ageInMonths)
+            self.petGenreIcon.image = UIImage(named: formatterGenre.getGenreImageName(genre: pet.genre))
+            
         }
     }
     
