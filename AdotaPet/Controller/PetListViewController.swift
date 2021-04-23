@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PetListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class PetListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var petCollection: UICollectionView!
     @IBOutlet weak var viewLocation: UIView!
@@ -50,6 +50,15 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
         
         return petCell
     }
+    
+    // MARK: Collection Flow Layout
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let cellWidth = collectionView.bounds.width / 2
+        return CGSize(width: cellWidth - 6, height: 238)
+    }
+
     
     // MARK: Collection Delegate
     
