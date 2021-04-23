@@ -19,12 +19,19 @@ class PetDescriptionViewController: UIViewController {
     @IBOutlet weak var petAdoption: UIButton!
     @IBOutlet weak var petMainInformationBox: UIView!
     
-    let petList: Array<Pet> = PetDAO().returnAllPets()
+    var selectedPet: Pet?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupInformationBox()
         setupButtonAdoption()
+        setup()
+    }
+    
+    func setup() {
+        if let pet = selectedPet {
+            self.petName.text = pet.name
+        }
     }
     
     func setupInformationBox() {
@@ -34,4 +41,5 @@ class PetDescriptionViewController: UIViewController {
     func setupButtonAdoption() {
         petAdoption.layer.cornerRadius = 25
     }
+    
 }

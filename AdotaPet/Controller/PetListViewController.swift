@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PetListViewController: UIViewController, UICollectionViewDataSource {
+class PetListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var petCollection: UICollectionView!
     @IBOutlet weak var viewLocation: UIView!
@@ -19,6 +19,7 @@ class PetListViewController: UIViewController, UICollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         petCollection.dataSource = self
+        petCollection.delegate = self
         setupUserPhoto()
         setupViewLocationBorder()
     }
@@ -48,6 +49,16 @@ class PetListViewController: UIViewController, UICollectionViewDataSource {
         petCell.layer.cornerRadius = 25
         
         return petCell
+    }
+    
+    // MARK: Collection Delegate
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let pet = petList[indexPath.item]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(identifier: "PetDescription") as! PetDescriptionViewController
+        controller.selectedPet = pet
+        self.present(controller, animated: true, completion: nil)
     }
     
     func setupUserPhoto() {
