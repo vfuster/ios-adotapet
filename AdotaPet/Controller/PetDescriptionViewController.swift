@@ -26,6 +26,7 @@ class PetDescriptionViewController: UIViewController {
         setupInformationBox()
         setupButtonAdoption()
         setup()
+        setupShadowMainInformationBox()
     }
     
     func setup() {
@@ -40,7 +41,6 @@ class PetDescriptionViewController: UIViewController {
             self.petDescription.text = pet.description
             self.petAge.text = formatterPet.formattedAge(ageInMonths: pet.ageInMonths)
             self.petGenreIcon.image = UIImage(named: formatterGenre.getGenreImageName(genre: pet.genre))
-            
         }
     }
     
@@ -50,6 +50,13 @@ class PetDescriptionViewController: UIViewController {
     
     func setupButtonAdoption() {
         petAdoption.layer.cornerRadius = 25
+    }
+    
+    func setupShadowMainInformationBox() {
+        petMainInformationBox.layer.shadowOffset = CGSize(width: 0, height: 8)
+        petMainInformationBox.layer.shadowRadius = 4
+        petMainInformationBox.layer.shadowOpacity = 0.1
+        petMainInformationBox.layer.shadowColor = UIColor.gray.cgColor
     }
     
 }
