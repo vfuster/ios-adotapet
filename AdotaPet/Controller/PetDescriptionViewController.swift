@@ -40,7 +40,7 @@ class PetDescriptionViewController: UIViewController {
             self.petBreed.text = pet.breed
             self.petDescription.text = pet.description
             self.petAge.text = formatterPet.formattedAge(ageInMonths: pet.ageInMonths)
-            self.petGenreIcon.image = UIImage(named: formatterGenre.getGenreImageName(genre: pet.genre))
+            self.petGenreIcon.image = UIImage(named: formatterGenre.getGenreImageName(genre: pet.genre, shouldUseDarkImage: true))
         }
     }
     

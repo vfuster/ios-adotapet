@@ -42,7 +42,7 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
         petCell.labelName.text = currentPet.name
         petCell.labelBreed.text = currentPet.breed
         petCell.labelGenre.text = formatterGenre.getGenreText(genre: currentPet.genre)
-        petCell.iconGenre.image = UIImage(named: formatterGenre.getGenreImageName(genre: currentPet.genre))
+        petCell.iconGenre.image = UIImage(named: formatterGenre.getGenreImageName(genre: currentPet.genre, shouldUseDarkImage: false))
         petCell.labelAge.text = formatterPet.formattedAge(ageInMonths: currentPet.ageInMonths)
         petCell.imagePet.image = UIImage(named: currentPet.photoPath)
         

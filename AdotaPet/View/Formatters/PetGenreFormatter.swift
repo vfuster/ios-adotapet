@@ -1,5 +1,5 @@
 //
-//  PetSexFormatter.swift
+//  PetGenreFormatter.swift
 //  AdotaPet
 //
 //  Created by Valeria on 19/04/21.
@@ -18,12 +18,13 @@ class PetGenreFormatter {
         }
     }
     
-    func getGenreImageName(genre: Genre) -> String {
+    func getGenreImageName(genre: Genre, shouldUseDarkImage: Bool) -> String {
         switch genre {
         case .female:
-            return "female.png"
+            return shouldUseDarkImage ? "female-dark.png" : "female-light.png"
+           
         case .male:
-            return "male.png"
+            return shouldUseDarkImage ? "male-dark.png" : "male-light.png"
         }
     }
 }

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -205,7 +206,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="x3T-84-orH"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -231,8 +232,8 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="wOj-UQ-zP3"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                                                <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -257,13 +258,25 @@
                                     <constraint firstItem="mEY-BW-ZC7" firstAttribute="leading" secondItem="ow9-AD-2DX" secondAttribute="leading" constant="30" id="vlZ-GP-vqP"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0G3-0C-lFE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0G3-0C-lFE">
                                 <rect key="frame" x="20" y="517" width="374" height="232.5"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id euismod nisi.Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eget volutpat sem, in efficitur nulla. Sed vitae tincidunt eros. Sed finibus lorem mauris, a tempor arcu mollis id. Suspendisse luctus vulputate velit eu sollicitudin. Maecenas ultricies, nisl eu feugiat pretium, eros ex posuere ligula, id ultrices neque quam nec nunc.</string>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nv-l4-sOH">
+                                <rect key="frame" x="28" y="72" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Bq-jc-zh0"/>
+                                    <constraint firstAttribute="width" constant="40" id="xf6-Ic-uxW"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="chevron.left.circle.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="NfS-qP-Slc">
                                 <rect key="frame" x="68" y="812" width="278" height="50"/>
                                 <subviews>
@@ -300,6 +313,7 @@
                         <viewLayoutGuide key="safeArea" id="39N-ta-y4M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6nv-l4-sOH" firstAttribute="leading" secondItem="39N-ta-y4M" secondAttribute="leading" constant="28" id="0ai-5s-PBs"/>
                             <constraint firstItem="ow9-AD-2DX" firstAttribute="leading" secondItem="39N-ta-y4M" secondAttribute="leading" constant="20" id="3sO-Ud-x7w"/>
                             <constraint firstItem="NfS-qP-Slc" firstAttribute="top" secondItem="0G3-0C-lFE" secondAttribute="bottom" constant="62.5" id="Cgc-WP-gXr"/>
                             <constraint firstItem="0G3-0C-lFE" firstAttribute="top" secondItem="ow9-AD-2DX" secondAttribute="bottom" constant="19" id="Is8-1r-uDW"/>
@@ -310,6 +324,7 @@
                             <constraint firstItem="39N-ta-y4M" firstAttribute="trailing" secondItem="vod-cE-m5W" secondAttribute="trailing" id="dNk-i1-w9U"/>
                             <constraint firstItem="ow9-AD-2DX" firstAttribute="top" secondItem="vod-cE-m5W" secondAttribute="bottom" constant="-50" id="fKd-hO-1Ky"/>
                             <constraint firstItem="vod-cE-m5W" firstAttribute="leading" secondItem="39N-ta-y4M" secondAttribute="leading" id="h8g-7M-G2N"/>
+                            <constraint firstItem="6nv-l4-sOH" firstAttribute="top" secondItem="39N-ta-y4M" secondAttribute="top" constant="28" id="hHA-OA-CeT"/>
                             <constraint firstItem="39N-ta-y4M" firstAttribute="top" secondItem="vod-cE-m5W" secondAttribute="top" constant="44" id="o2O-cn-7Nc"/>
                             <constraint firstItem="vod-cE-m5W" firstAttribute="height" secondItem="lzC-dg-2BM" secondAttribute="height" multiplier="0.5" id="sqi-mJ-W6n"/>
                             <constraint firstItem="39N-ta-y4M" firstAttribute="trailing" secondItem="0G3-0C-lFE" secondAttribute="trailing" constant="20" id="zZb-MJ-ysY"/>
@@ -333,6 +348,7 @@
     </scenes>
     <resources>
         <image name="board.png" width="256" height="256"/>
+        <image name="chevron.left.circle.fill" catalog="system" width="128" height="121"/>
         <image name="clock.png" width="256" height="256"/>
         <image name="maps.png" width="256" height="256"/>
         <systemColor name="systemBackgroundColor">
