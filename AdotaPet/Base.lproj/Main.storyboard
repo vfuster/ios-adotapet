@@ -276,6 +276,9 @@
                                 <state key="normal">
                                     <imageReference key="image" image="chevron.left.circle.fill" catalog="system" symbolScale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="backToPetList:" destination="zw0-zq-Kq7" eventType="touchUpInside" id="j0U-Ml-3tv"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="NfS-qP-Slc">
                                 <rect key="frame" x="78" y="812" width="258" height="50"/>

@@ -61,7 +61,6 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
 
     
     // MARK: Collection Delegate
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let pet = petList[indexPath.item]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

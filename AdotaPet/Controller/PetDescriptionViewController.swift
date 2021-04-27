@@ -44,6 +44,11 @@ class PetDescriptionViewController: UIViewController {
         }
     }
     
+    @IBAction func backToPetList(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     func setupInformationBox() {
         petMainInformationBox.layer.cornerRadius = 20
     }
