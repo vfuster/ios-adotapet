@@ -366,72 +366,118 @@
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3hC-IG-d8g">
-                                <rect key="frame" x="0.0" y="49" width="414" height="750"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="htn-qu-eh7">
+                                <rect key="frame" x="8" y="64" width="398" height="182"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="w11-1i-xdx">
-                                        <rect key="frame" x="8" y="0.0" width="406" height="750"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de Residencia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dao-KE-hP9">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="8rw-Wa-dn3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dZB-c0-C2y">
+                                        <rect key="frame" x="0.0" y="40" width="398" height="60"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seu nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kuO-ZO-4sm">
-                                                <rect key="frame" x="0.0" y="0.0" width="406" height="40"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Pm-GY-XEf">
+                                                <rect key="frame" x="0.0" y="0.0" width="188" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Casa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="591-He-5mn">
+                                                        <rect key="frame" x="0.0" y="20" width="188" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="iHd-yK-BiY"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.9667260362694301" green="0.9667260362694301" blue="0.9667260362694301" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="9Sh-dD-DxV"/>
+                                                    <constraint firstAttribute="width" constant="200" id="Acw-Jb-IoO"/>
+                                                    <constraint firstAttribute="trailing" secondItem="591-He-5mn" secondAttribute="trailing" id="AdN-dv-ezd"/>
+                                                    <constraint firstItem="591-He-5mn" firstAttribute="leading" secondItem="5Pm-GY-XEf" secondAttribute="leading" id="FQz-GC-SVJ"/>
+                                                    <constraint firstItem="591-He-5mn" firstAttribute="top" secondItem="5Pm-GY-XEf" secondAttribute="top" constant="20" id="NTY-eh-SvB"/>
+                                                    <constraint firstAttribute="height" constant="60" id="Oyo-aU-nBL"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone para contato" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efr-Hq-QW2">
-                                                <rect key="frame" x="0.0" y="40" width="406" height="40"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZlD-mg-Uji">
+                                                <rect key="frame" x="198" y="0.0" width="200" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apartamento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFY-4m-aFT">
+                                                        <rect key="frame" x="0.0" y="20" width="200" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="XtQ-rF-TyE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.96672603629999998" green="0.96672603629999998" blue="0.96672603629999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="mMH-0v-TiF"/>
+                                                    <constraint firstItem="eFY-4m-aFT" firstAttribute="leading" secondItem="ZlD-mg-Uji" secondAttribute="leading" id="IpN-js-Ir5"/>
+                                                    <constraint firstItem="eFY-4m-aFT" firstAttribute="top" secondItem="ZlD-mg-Uji" secondAttribute="top" constant="20" id="LY7-a6-ScY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="eFY-4m-aFT" secondAttribute="trailing" id="aP3-Om-Jjx"/>
+                                                    <constraint firstAttribute="width" constant="200" id="baD-wy-lKU"/>
+                                                    <constraint firstAttribute="height" constant="60" id="skM-aj-3K3"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GeD-5m-foL">
-                                                <rect key="frame" x="0.0" y="80" width="406" height="200"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="70g-H3-ZgR"/>
-                                                </constraints>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                <color key="textColor" systemColor="labelColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipos de Residência" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZP-re-2YE">
-                                                <rect key="frame" x="0.0" y="280" width="406" height="470"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Mde-G3-iHf">
+                                        <rect key="frame" x="0.0" y="110" width="398" height="31"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dnE-I4-2fv">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="1" green="0.87109588329999998" blue="0.30111164579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Declaro possuir estrutura confortavel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xn-9d-Wnx">
+                                                <rect key="frame" x="65" y="0.0" width="333" height="31"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tH3-dm-QEX">
+                                        <rect key="frame" x="0.0" y="151" width="398" height="31"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hKd-ml-se2">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="1" green="0.87109588329999998" blue="0.30111164579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8O-AK-Ekw">
+                                                <rect key="frame" x="65" y="0.0" width="333" height="31"/>
+                                                <string key="text">Declaro possuir condição
+ financeira para manter o/a
+ NomeDoPet</string>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="g7M-V1-GFk" firstAttribute="bottom" secondItem="w11-1i-xdx" secondAttribute="bottom" id="4yI-J3-S8L"/>
-                                    <constraint firstItem="g7M-V1-GFk" firstAttribute="trailing" secondItem="w11-1i-xdx" secondAttribute="trailing" id="EMl-ZU-iS7"/>
-                                    <constraint firstItem="w11-1i-xdx" firstAttribute="top" secondItem="g7M-V1-GFk" secondAttribute="top" id="W3O-Mq-scR"/>
-                                    <constraint firstItem="w11-1i-xdx" firstAttribute="leading" secondItem="g7M-V1-GFk" secondAttribute="leading" constant="8" id="fuf-Wt-jUR"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="Xs3-Nv-KcY"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="g7M-V1-GFk"/>
-                            </scrollView>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pv9-nH-fT3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="36X-00-4jp" firstAttribute="leading" secondItem="Pv9-nH-fT3" secondAttribute="leading" constant="8" id="6YQ-1e-BMx"/>
+                            <constraint firstItem="htn-qu-eh7" firstAttribute="top" secondItem="Pwu-pm-bQu" secondAttribute="top" constant="64" id="LBH-Cr-73p"/>
                             <constraint firstItem="36X-00-4jp" firstAttribute="bottom" secondItem="Pv9-nH-fT3" secondAttribute="bottom" id="fsq-as-nIM"/>
+                            <constraint firstItem="htn-qu-eh7" firstAttribute="leading" secondItem="Pv9-nH-fT3" secondAttribute="leading" constant="8" id="mHm-eY-uaw"/>
                             <constraint firstItem="Pv9-nH-fT3" firstAttribute="trailing" secondItem="36X-00-4jp" secondAttribute="trailing" constant="8" id="stT-fp-ocd"/>
+                            <constraint firstItem="Pv9-nH-fT3" firstAttribute="trailing" secondItem="htn-qu-eh7" secondAttribute="trailing" constant="8" id="zA1-Zj-jsw"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="petOwnerName" destination="kuO-ZO-4sm" id="qvO-iF-u7n"/>
-                        <outlet property="petOwnerPhone" destination="efr-Hq-QW2" id="EvT-i3-ete"/>
+                        <outlet property="buttonApartament" destination="ZlD-mg-Uji" id="2Fo-rW-qhD"/>
+                        <outlet property="buttonHouse" destination="5Pm-GY-XEf" id="wKB-Fl-a5k"/>
                         <outlet property="requestAdoption" destination="36X-00-4jp" id="NuD-AS-STb"/>
-                        <outlet property="residenceTypeTitle" destination="9ZP-re-2YE" id="aL9-Ff-NSE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4D-F0-YFy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -445,9 +491,6 @@
         <image name="clock.png" width="256" height="256"/>
         <image name="heart.png" width="256" height="256"/>
         <image name="maps.png" width="256" height="256"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
