@@ -41,6 +41,5 @@ enum Category {
 enum Genre {
     case female
     case male
-    
 }
 

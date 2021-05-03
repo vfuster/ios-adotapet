@@ -7,7 +7,15 @@
 
 import UIKit
 
+enum ResidenceSelectionState {
+    case unselected
+    case selectedHouse
+    case selectedApartament
+}
+
 class RequestAdoptionViewController: UIViewController {
+    
+    private var residenceState: ResidenceSelectionState = .unselected
     
     @IBOutlet weak var requestAdoption: UIButton!
     @IBOutlet weak var buttonHouse: UIView!
@@ -48,9 +56,11 @@ class RequestAdoptionViewController: UIViewController {
     }
     
     @objc func handleTapOnButtonHouse() {
+        residenceState = .selectedHouse
         buttonHouse.backgroundColor = UIColor().getYellow()
         buttonHouse.layer.borderWidth = 0
         applyDefaultStyle(in: buttonApartament)
+        handleButtonState()
     }
     
     // TapGesture Apartament
@@ -61,9 +71,11 @@ class RequestAdoptionViewController: UIViewController {
     }
     
     @objc func handleTapButtonApartament() {
+        residenceState = .selectedApartament
         buttonApartament.backgroundColor = UIColor().getYellow()
         buttonApartament.layer.borderWidth = 0
         applyDefaultStyle(in: buttonHouse)
+        handleButtonState()
     }
     
     // Button Switch House
@@ -77,7 +89,7 @@ class RequestAdoptionViewController: UIViewController {
     }
     
     private func handleButtonState() {
-        if buttonSwitchMoney.isOn && buttonSwitchResidence.isOn {
+        if buttonSwitchMoney.isOn && buttonSwitchResidence.isOn && residenceState != .unselected {
             requestAdoption.isEnabled = true
             requestAdoption.backgroundColor = UIColor().getYellow()
         } else {
