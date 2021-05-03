@@ -12,6 +12,8 @@ class RequestAdoptionViewController: UIViewController {
     @IBOutlet weak var requestAdoption: UIButton!
     @IBOutlet weak var buttonHouse: UIView!
     @IBOutlet weak var buttonApartament: UIView!
+    @IBOutlet weak var buttonSwitchResidence: UISwitch!
+    @IBOutlet weak var buttonSwitchMoney: UISwitch!
     
     
     override func viewDidLoad() {
@@ -64,4 +66,23 @@ class RequestAdoptionViewController: UIViewController {
         applyDefaultStyle(in: buttonHouse)
     }
     
+    // Button Switch House
+    @IBAction func clickedSwitchButtonResidence(_ sender: Any) {
+        handleButtonState()
+    }
+    
+    // Button Switch Apartament
+    @IBAction func clickedSwitchButtonMoney(_ sender: Any) {
+        handleButtonState()
+    }
+    
+    private func handleButtonState() {
+        if buttonSwitchMoney.isOn && buttonSwitchResidence.isOn {
+            requestAdoption.isEnabled = true
+            requestAdoption.backgroundColor = UIColor(red: 255 / 255, green: 223 / 255, blue: 83 / 225, alpha: 1)
+        } else {
+            requestAdoption.isEnabled = false
+            requestAdoption.backgroundColor = UIColor(red: 247 / 255, green: 247 / 255, blue: 247 / 255, alpha: 1)
+        }
+    }
 }
