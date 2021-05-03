@@ -12,6 +12,7 @@
 		3A5F175D26336FD000C73888 /* left-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F175C26336FD000C73888 /* left-arrow.png */; };
 		3A5F1761263373C400C73888 /* male-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F175F263373C400C73888 /* male-dark.png */; };
 		3A5F1762263373C400C73888 /* female-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F1760263373C400C73888 /* female-dark.png */; };
+		3A818AC8263F774B001644F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A818AC7263F774B001644F8 /* Colors.swift */; };
 		3ACE507F262A1CA0004C9FF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE507E262A1CA0004C9FF0 /* AppDelegate.swift */; };
 		3ACE5081262A1CA0004C9FF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE5080262A1CA0004C9FF0 /* SceneDelegate.swift */; };
 		3ACE5086262A1CA0004C9FF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE5084262A1CA0004C9FF0 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		3A5F175C26336FD000C73888 /* left-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow.png"; sourceTree = "<group>"; };
 		3A5F175F263373C400C73888 /* male-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "male-dark.png"; sourceTree = "<group>"; };
 		3A5F1760263373C400C73888 /* female-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "female-dark.png"; sourceTree = "<group>"; };
+		3A818AC7263F774B001644F8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3ACE507B262A1CA0004C9FF0 /* AdotaPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdotaPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACE507E262A1CA0004C9FF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ACE5080262A1CA0004C9FF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A818AC6263F7733001644F8 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				3A818AC7263F774B001644F8 /* Colors.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		3ACE5072262A1CA0004C9FF0 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +140,7 @@
 		3ACE5094262A1CCB004C9FF0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3A818AC6263F7733001644F8 /* Theme */,
 				3ACE50BC262A4B61004C9FF0 /* Formatters */,
 				3ACE50A3262A22AF004C9FF0 /* PetListCollectionViewCell.swift */,
 			);
@@ -275,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ACE50A4262A22AF004C9FF0 /* PetListCollectionViewCell.swift in Sources */,
+				3A818AC8263F774B001644F8 /* Colors.swift in Sources */,
 				3ACE509B262A1D5B004C9FF0 /* PetDao.swift in Sources */,
 				3ACE50A1262A20F3004C9FF0 /* PetListViewController.swift in Sources */,
 				3ACE5098262A1CEF004C9FF0 /* Pet.swift in Sources */,

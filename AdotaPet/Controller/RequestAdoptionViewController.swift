@@ -37,7 +37,7 @@ class RequestAdoptionViewController: UIViewController {
         view.layer.cornerRadius = 20
         view.layer.borderColor = UIColor.lightGray.cgColor
         view.layer.borderWidth = 1
-        view.backgroundColor = UIColor(red: 247 / 255, green: 247 / 255, blue: 247 / 255, alpha: 1)
+        view.backgroundColor = UIColor().getGray()
     }
     
     // TapGesture House
@@ -48,7 +48,7 @@ class RequestAdoptionViewController: UIViewController {
     }
     
     @objc func handleTapOnButtonHouse() {
-        buttonHouse.backgroundColor = UIColor(red: 255 / 255, green: 223 / 255, blue: 83 / 255, alpha: 1)
+        buttonHouse.backgroundColor = UIColor().getYellow()
         buttonHouse.layer.borderWidth = 0
         applyDefaultStyle(in: buttonApartament)
     }
@@ -61,7 +61,7 @@ class RequestAdoptionViewController: UIViewController {
     }
     
     @objc func handleTapButtonApartament() {
-        buttonApartament.backgroundColor = UIColor(red: 255 / 255, green: 223 / 255, blue: 83 / 225, alpha: 1)
+        buttonApartament.backgroundColor = UIColor().getYellow()
         buttonApartament.layer.borderWidth = 0
         applyDefaultStyle(in: buttonHouse)
     }
@@ -79,10 +79,10 @@ class RequestAdoptionViewController: UIViewController {
     private func handleButtonState() {
         if buttonSwitchMoney.isOn && buttonSwitchResidence.isOn {
             requestAdoption.isEnabled = true
-            requestAdoption.backgroundColor = UIColor(red: 255 / 255, green: 223 / 255, blue: 83 / 225, alpha: 1)
+            requestAdoption.backgroundColor = UIColor().getYellow()
         } else {
             requestAdoption.isEnabled = false
-            requestAdoption.backgroundColor = UIColor(red: 247 / 255, green: 247 / 255, blue: 247 / 255, alpha: 1)
+            requestAdoption.backgroundColor = UIColor().getGray()
         }
     }
 }
