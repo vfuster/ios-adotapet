@@ -7,25 +7,24 @@
 
 import UIKit
 
-enum ResidenceSelectionState {
-    case unselected
-    case selectedHouse
-    case selectedApartament
-}
-
 class RequestAdoptionViewController: UIViewController {
+
+    private enum ResidenceSelectionState {
+        case unselected
+        case selectedHouse
+        case selectedApartament
+    }
     
     var petToBeAdopted: Pet?
     
     private var residenceState: ResidenceSelectionState = .unselected
     
-    @IBOutlet weak var requestAdoption: UIButton!
-    @IBOutlet weak var buttonHouse: UIView!
-    @IBOutlet weak var buttonApartament: UIView!
-    @IBOutlet weak var buttonSwitchResidence: UISwitch!
-    @IBOutlet weak var buttonSwitchMoney: UISwitch!
-    @IBOutlet weak var textAboutFinancial: UILabel!
-    
+    @IBOutlet private weak var requestAdoption: UIButton!
+    @IBOutlet private weak var buttonHouse: UIView!
+    @IBOutlet private weak var buttonApartament: UIView!
+    @IBOutlet private weak var buttonSwitchResidence: UISwitch!
+    @IBOutlet private weak var buttonSwitchMoney: UISwitch!
+    @IBOutlet private weak var textAboutFinancial: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +35,14 @@ class RequestAdoptionViewController: UIViewController {
         showPetName()
     }
     
+    // MARK: Private
+    
     private func showPetName() {
         if let pet = petToBeAdopted {
             
             let formatterGenre = PetGenreFormatter()
             
-            self.textAboutFinancial.text = "Declaro possuir condição financeira para manter \(formatterGenre.getGenreArticle(genre: pet.genre)) \(pet.name)"
+            self.textAboutFinancial.text = "Declaro possuir condição financeira para manter \(formatterGenre.getGenreArticle(genre: pet.genre )) \(pet.name)"
         }
     }
     
@@ -61,14 +62,14 @@ class RequestAdoptionViewController: UIViewController {
         view.backgroundColor = UIColor().getGray()
     }
     
-    // TapGesture House
+    // MARK: TapGesture House
     
     private func setupTapGestureOnButtonHouse() {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTapOnButtonHouse))
         buttonHouse.addGestureRecognizer(gesture)
     }
     
-    @objc func handleTapOnButtonHouse() {
+    @objc private func handleTapOnButtonHouse() {
         residenceState = .selectedHouse
         buttonHouse.backgroundColor = UIColor().getYellow()
         buttonHouse.layer.borderWidth = 0
@@ -83,7 +84,7 @@ class RequestAdoptionViewController: UIViewController {
         buttonApartament.addGestureRecognizer(gesture)
     }
     
-    @objc func handleTapButtonApartament() {
+    @objc private func handleTapButtonApartament() {
         residenceState = .selectedApartament
         buttonApartament.backgroundColor = UIColor().getYellow()
         buttonApartament.layer.borderWidth = 0
@@ -92,12 +93,12 @@ class RequestAdoptionViewController: UIViewController {
     }
     
     // Button Switch House
-    @IBAction func clickedSwitchButtonResidence(_ sender: Any) {
+    @IBAction private func clickedSwitchButtonResidence(_ sender: Any) {
         handleButtonState()
     }
     
     // Button Switch Apartament
-    @IBAction func clickedSwitchButtonMoney(_ sender: Any) {
+    @IBAction private func clickedSwitchButtonMoney(_ sender: Any) {
         handleButtonState()
     }
     
