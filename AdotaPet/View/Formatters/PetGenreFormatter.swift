@@ -27,6 +27,15 @@ class PetGenreFormatter {
             return shouldUseDarkImage ? "male-dark.png" : "male-light.png"
         }
     }
+    
+    func getGenreArticle(genre: Genre) -> String {
+        switch genre {
+        case .female:
+            return "a"
+        case .male:
+            return "o"
+        }
+    }
 }
 
 

@@ -64,4 +64,12 @@ class PetDescriptionViewController: UIViewController {
         petMainInformationBox.layer.shadowColor = UIColor.gray.cgColor
     }
     
+    @IBAction func tapAdoptionPet(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(identifier: "RequestAdoption") as! RequestAdoptionViewController
+        controller.petToBeAdopted = selectedPet
+        self.present(controller, animated: true, completion: nil)
+    }
+    
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="10C-k6-WS9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -301,6 +301,9 @@
                                         <state key="normal" title="Adoption">
                                             <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapAdoptionPet:" destination="zw0-zq-Kq7" eventType="touchUpInside" id="p5o-Fs-b7n"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -350,7 +353,7 @@
         <!--Request Adoption View Controller-->
         <scene sceneID="dej-35-CAX">
             <objects>
-                <viewController id="10C-k6-WS9" customClass="RequestAdoptionViewController" customModule="AdotaPet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RequestAdoption" id="10C-k6-WS9" customClass="RequestAdoptionViewController" customModule="AdotaPet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pwu-pm-bQu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -490,6 +493,7 @@
                         <outlet property="buttonSwitchMoney" destination="hKd-ml-se2" id="xNK-AU-Wuu"/>
                         <outlet property="buttonSwitchResidence" destination="dnE-I4-2fv" id="8n5-GB-a51"/>
                         <outlet property="requestAdoption" destination="36X-00-4jp" id="NuD-AS-STb"/>
+                        <outlet property="textAboutFinancial" destination="f8O-AK-Ekw" id="pE0-V4-cUv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4D-F0-YFy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

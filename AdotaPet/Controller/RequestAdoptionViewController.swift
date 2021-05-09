@@ -15,6 +15,8 @@ enum ResidenceSelectionState {
 
 class RequestAdoptionViewController: UIViewController {
     
+    var petToBeAdopted: Pet?
+    
     private var residenceState: ResidenceSelectionState = .unselected
     
     @IBOutlet weak var requestAdoption: UIButton!
@@ -22,6 +24,7 @@ class RequestAdoptionViewController: UIViewController {
     @IBOutlet weak var buttonApartament: UIView!
     @IBOutlet weak var buttonSwitchResidence: UISwitch!
     @IBOutlet weak var buttonSwitchMoney: UISwitch!
+    @IBOutlet weak var textAboutFinancial: UILabel!
     
     
     override func viewDidLoad() {
@@ -30,6 +33,16 @@ class RequestAdoptionViewController: UIViewController {
         setupButtonResidence()
         setupTapGestureOnButtonHouse()
         setupTapGestureOnButtonApartament()
+        showPetName()
+    }
+    
+    private func showPetName() {
+        if let pet = petToBeAdopted {
+            
+            let formatterGenre = PetGenreFormatter()
+            
+            self.textAboutFinancial.text = "Declaro possuir condição financeira para manter \(formatterGenre.getGenreArticle(genre: pet.genre)) \(pet.name)"
+        }
     }
     
     private func setupButtonRequestAdoption() {
