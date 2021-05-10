@@ -37,6 +37,11 @@ class RequestAdoptionViewController: UIViewController {
     
     // MARK: Private
     
+    
+    @IBAction func backToPetDescription(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     private func showPetName() {
         if let pet = petToBeAdopted {
             
@@ -57,9 +62,11 @@ class RequestAdoptionViewController: UIViewController {
     
     private func applyDefaultStyle(in view: UIView) {
         view.layer.cornerRadius = 20
-        view.layer.borderColor = UIColor.lightGray.cgColor
-        view.layer.borderWidth = 1
-        view.backgroundColor = UIColor().getGray()
+        view.backgroundColor = UIColor().getGray() 
+        view.layer.shadowOffset = CGSize(width: 0, height: 8)
+        view.layer.shadowRadius = 4
+        view.layer.shadowOpacity = 0.1
+        view.layer.shadowColor = UIColor.gray.cgColor
     }
     
     // MARK: TapGesture House

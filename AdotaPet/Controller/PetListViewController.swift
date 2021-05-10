@@ -66,7 +66,10 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(identifier: "PetDescription") as! PetDescriptionViewController
         controller.selectedPet = pet
-        self.present(controller, animated: true, completion: nil)
+        let navigationController = UINavigationController(rootViewController: controller)
+        navigationController.isNavigationBarHidden = true
+        
+        self.present(navigationController, animated: true, completion: nil)
     }
     
     func setupUserPhoto() {

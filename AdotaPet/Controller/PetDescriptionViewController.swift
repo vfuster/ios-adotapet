@@ -10,14 +10,14 @@ import UIKit
 class PetDescriptionViewController: UIViewController {
     
     
-    @IBOutlet weak var petPhoto: UIImageView!
-    @IBOutlet weak var petName: UILabel!
-    @IBOutlet weak var petGenreIcon: UIImageView!
-    @IBOutlet weak var petBreed: UILabel!
-    @IBOutlet weak var petAge: UILabel!
-    @IBOutlet weak var petDescription: UILabel!
-    @IBOutlet weak var petAdoption: UIButton!
-    @IBOutlet weak var petMainInformationBox: UIView!
+    @IBOutlet private weak var petPhoto: UIImageView!
+    @IBOutlet private weak var petName: UILabel!
+    @IBOutlet private weak var petGenreIcon: UIImageView!
+    @IBOutlet private weak var petBreed: UILabel!
+    @IBOutlet private weak var petAge: UILabel!
+    @IBOutlet private weak var petDescription: UILabel!
+    @IBOutlet private weak var petAdoption: UIButton!
+    @IBOutlet private weak var petMainInformationBox: UIView!
     
     var selectedPet: Pet?
     
@@ -29,7 +29,7 @@ class PetDescriptionViewController: UIViewController {
         setupShadowMainInformationBox()
     }
     
-    func setup() {
+    private func setup() {
         
         let formatterPet = PetAgeFormatter()
         let formatterGenre = PetGenreFormatter()
@@ -44,32 +44,30 @@ class PetDescriptionViewController: UIViewController {
         }
     }
     
-    @IBAction func backToPetList(_ sender: Any) {
+    @IBAction private func backToPetList(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    func setupInformationBox() {
+    private func setupInformationBox() {
         petMainInformationBox.layer.cornerRadius = 20
     }
     
-    func setupButtonAdoption() {
+    private func setupButtonAdoption() {
         petAdoption.layer.cornerRadius = 25
     }
     
-    func setupShadowMainInformationBox() {
+    private func setupShadowMainInformationBox() {
         petMainInformationBox.layer.shadowOffset = CGSize(width: 0, height: 8)
         petMainInformationBox.layer.shadowRadius = 4
         petMainInformationBox.layer.shadowOpacity = 0.1
         petMainInformationBox.layer.shadowColor = UIColor.gray.cgColor
     }
     
-    @IBAction func tapAdoptionPet(_ sender: Any) {
-        
+    @IBAction private func tapAdoptionPet(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(identifier: "RequestAdoption") as! RequestAdoptionViewController
         controller.petToBeAdopted = selectedPet
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }
