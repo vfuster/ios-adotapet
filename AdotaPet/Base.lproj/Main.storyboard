@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lOg-jG-hpc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -10,6 +10,59 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--City Picker View Controller-->
+        <scene sceneID="9TP-2H-XbP">
+            <objects>
+                <viewController id="lOg-jG-hpc" customClass="CityPickerViewController" customModule="AdotaPet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JiX-VG-kc8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QHp-K0-IGB">
+                                <rect key="frame" x="0.0" y="138" width="414" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione a Cidade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWd-co-mcd">
+                                <rect key="frame" x="109" y="78" width="196.5" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6U-2i-NrX">
+                                <rect key="frame" x="28" y="72" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gG0-KC-Gfs"/>
+                                    <constraint firstAttribute="width" constant="40" id="t6m-SV-OWi"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="chevron.left.circle.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToPetDescription:" destination="10C-k6-WS9" eventType="touchUpInside" id="2ZR-vI-0YE"/>
+                                    <action selector="backToPetList:" destination="zw0-zq-Kq7" eventType="touchUpInside" id="glv-a1-sKq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zuP-sO-Enz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="QHp-K0-IGB" secondAttribute="bottom" id="4a2-Rq-zhN"/>
+                            <constraint firstItem="S6U-2i-NrX" firstAttribute="leading" secondItem="zuP-sO-Enz" secondAttribute="leading" constant="28" id="94t-7w-SHh"/>
+                            <constraint firstItem="QHp-K0-IGB" firstAttribute="top" secondItem="S6U-2i-NrX" secondAttribute="bottom" constant="26" id="H9W-hf-gBG"/>
+                            <constraint firstItem="MWd-co-mcd" firstAttribute="top" secondItem="zuP-sO-Enz" secondAttribute="top" constant="34" id="OJv-0e-cdN"/>
+                            <constraint firstItem="S6U-2i-NrX" firstAttribute="top" secondItem="zuP-sO-Enz" secondAttribute="top" constant="28" id="bFE-y4-9Zt"/>
+                            <constraint firstItem="QHp-K0-IGB" firstAttribute="trailing" secondItem="zuP-sO-Enz" secondAttribute="trailing" id="eqc-F3-pP0"/>
+                            <constraint firstItem="MWd-co-mcd" firstAttribute="centerX" secondItem="JiX-VG-kc8" secondAttribute="centerX" id="usp-V6-lDf"/>
+                            <constraint firstItem="QHp-K0-IGB" firstAttribute="leading" secondItem="zuP-sO-Enz" secondAttribute="leading" id="uyf-RS-fXM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pj6-q1-nlP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-917.39130434782612" y="87.723214285714278"/>
+        </scene>
         <!--Pet List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>

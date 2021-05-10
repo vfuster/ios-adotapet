@@ -13,6 +13,8 @@
 		3A5F1761263373C400C73888 /* male-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F175F263373C400C73888 /* male-dark.png */; };
 		3A5F1762263373C400C73888 /* female-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F1760263373C400C73888 /* female-dark.png */; };
 		3A818AC8263F774B001644F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A818AC7263F774B001644F8 /* Colors.swift */; };
+		3A892D092648C4350071231C /* CityPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A892D082648C4350071231C /* CityPickerViewController.swift */; };
+		3A892D0D2648C5920071231C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A892D0C2648C5920071231C /* City.swift */; };
 		3ACE507F262A1CA0004C9FF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE507E262A1CA0004C9FF0 /* AppDelegate.swift */; };
 		3ACE5081262A1CA0004C9FF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE5080262A1CA0004C9FF0 /* SceneDelegate.swift */; };
 		3ACE5086262A1CA0004C9FF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE5084262A1CA0004C9FF0 /* Main.storyboard */; };
@@ -47,6 +49,8 @@
 		3A5F175F263373C400C73888 /* male-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "male-dark.png"; sourceTree = "<group>"; };
 		3A5F1760263373C400C73888 /* female-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "female-dark.png"; sourceTree = "<group>"; };
 		3A818AC7263F774B001644F8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		3A892D082648C4350071231C /* CityPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPickerViewController.swift; sourceTree = "<group>"; };
+		3A892D0C2648C5920071231C /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		3ACE507B262A1CA0004C9FF0 /* AdotaPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdotaPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACE507E262A1CA0004C9FF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ACE5080262A1CA0004C9FF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				3ACE5097262A1CEF004C9FF0 /* Pet.swift */,
+				3A892D0C2648C5920071231C /* City.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 				3ACE50A0262A20F3004C9FF0 /* PetListViewController.swift */,
 				3ACE50D5262E313F004C9FF0 /* PetDescriptionViewController.swift */,
 				3AD2E7B32638A1C400CF5093 /* RequestAdoptionViewController.swift */,
+				3A892D082648C4350071231C /* CityPickerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -292,9 +298,11 @@
 				3ACE5098262A1CEF004C9FF0 /* Pet.swift in Sources */,
 				3ACE50D6262E313F004C9FF0 /* PetDescriptionViewController.swift in Sources */,
 				3ACE507F262A1CA0004C9FF0 /* AppDelegate.swift in Sources */,
+				3A892D092648C4350071231C /* CityPickerViewController.swift in Sources */,
 				3AD2E7B42638A1C400CF5093 /* RequestAdoptionViewController.swift in Sources */,
 				3ACE50C9262DD23E004C9FF0 /* PetGenreFormatter.swift in Sources */,
 				3ACE5081262A1CA0004C9FF0 /* SceneDelegate.swift in Sources */,
+				3A892D0D2648C5920071231C /* City.swift in Sources */,
 				3ACE50BE262A4B6C004C9FF0 /* PetAgeFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
