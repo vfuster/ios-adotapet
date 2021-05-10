@@ -37,8 +37,7 @@ class RequestAdoptionViewController: UIViewController {
     
     // MARK: Private
     
-    
-    @IBAction func backToPetDescription(_ sender: Any) {
+    @IBAction private func backToPetDescription(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -62,7 +61,7 @@ class RequestAdoptionViewController: UIViewController {
     
     private func applyDefaultStyle(in view: UIView) {
         view.layer.cornerRadius = 20
-        view.backgroundColor = UIColor().getGray() 
+        view.backgroundColor = UIColor().getGray()
         view.layer.shadowOffset = CGSize(width: 0, height: 8)
         view.layer.shadowRadius = 4
         view.layer.shadowOpacity = 0.1
@@ -78,8 +77,7 @@ class RequestAdoptionViewController: UIViewController {
     
     @objc private func handleTapOnButtonHouse() {
         residenceState = .selectedHouse
-        buttonHouse.backgroundColor = UIColor().getYellow()
-        buttonHouse.layer.borderWidth = 0
+        applySelectedStyle(in: buttonHouse)
         applyDefaultStyle(in: buttonApartament)
         handleButtonState()
     }
@@ -93,10 +91,14 @@ class RequestAdoptionViewController: UIViewController {
     
     @objc private func handleTapButtonApartament() {
         residenceState = .selectedApartament
-        buttonApartament.backgroundColor = UIColor().getYellow()
-        buttonApartament.layer.borderWidth = 0
+        applySelectedStyle(in: buttonApartament)
         applyDefaultStyle(in: buttonHouse)
         handleButtonState()
+    }
+    
+    private func applySelectedStyle(in view: UIView) {
+        view.backgroundColor = UIColor().getYellow()
+        view.layer.borderWidth = 0
     }
     
     // Button Switch House

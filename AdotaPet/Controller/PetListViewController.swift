@@ -9,12 +9,12 @@ import UIKit
 
 class PetListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    @IBOutlet weak var petCollection: UICollectionView!
-    @IBOutlet weak var viewLocation: UIView!
-    @IBOutlet weak var imageIcon: UIImageView!
-    @IBOutlet weak var imageUser: UIImageView!
+    @IBOutlet private weak var petCollection: UICollectionView!
+    @IBOutlet private weak var viewLocation: UIView!
+    @IBOutlet private weak var imageIcon: UIImageView!
+    @IBOutlet private weak var imageUser: UIImageView!
     
-    let petList: Array<Pet> = PetDAO().returnAllPets()
+    private let petList: Array<Pet> = PetDAO().returnAllPets()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,19 +34,7 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
         let petCell = collectionView.dequeueReusableCell(withReuseIdentifier: "petCell", for: indexPath) as! PetListCollectionViewCell
         
         let currentPet = petList[indexPath.item]
-        
-        let formatterPet = PetAgeFormatter()
-        let formatterGenre = PetGenreFormatter()
-        
-        
-        petCell.labelName.text = currentPet.name
-        petCell.labelBreed.text = currentPet.breed
-        petCell.labelGenre.text = formatterGenre.getGenreText(genre: currentPet.genre)
-        petCell.iconGenre.image = UIImage(named: formatterGenre.getGenreImageName(genre: currentPet.genre, shouldUseDarkImage: false))
-        petCell.labelAge.text = formatterPet.formattedAge(ageInMonths: currentPet.ageInMonths)
-        petCell.imagePet.image = UIImage(named: currentPet.photoPath)
-        
-        petCell.layer.cornerRadius = 25
+        petCell.configure(with: currentPet)
         
         return petCell
     }
@@ -58,7 +46,6 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
         let cellWidth = collectionView.bounds.width / 2
         return CGSize(width: cellWidth - 6, height: 238)
     }
-
     
     // MARK: Collection Delegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -72,12 +59,12 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
         self.present(navigationController, animated: true, completion: nil)
     }
     
-    func setupUserPhoto() {
+    private func setupUserPhoto() {
         imageUser.layer.cornerRadius = 20
         imageUser.image = UIImage(named: "user_avatar.jpeg")
     }
     
-    func setupViewLocationBorder() {
+    private func setupViewLocationBorder() {
         viewLocation.layer.cornerRadius = 20
     }
     

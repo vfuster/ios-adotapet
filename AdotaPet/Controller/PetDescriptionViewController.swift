@@ -9,7 +9,6 @@ import UIKit
 
 class PetDescriptionViewController: UIViewController {
     
-    
     @IBOutlet private weak var petPhoto: UIImageView!
     @IBOutlet private weak var petName: UILabel!
     @IBOutlet private weak var petGenreIcon: UIImageView!
@@ -25,16 +24,15 @@ class PetDescriptionViewController: UIViewController {
         super.viewDidLoad()
         setupInformationBox()
         setupButtonAdoption()
-        setup()
+        setupScreenContent()
         setupShadowMainInformationBox()
     }
     
-    private func setup() {
-        
-        let formatterPet = PetAgeFormatter()
-        let formatterGenre = PetGenreFormatter()
-        
+    private func setupScreenContent() {
         if let pet = selectedPet {
+            let formatterPet = PetAgeFormatter()
+            let formatterGenre = PetGenreFormatter()
+            
             self.petName.text = pet.name
             self.petPhoto.image = UIImage(named: pet.photoPath)
             self.petBreed.text = pet.breed
@@ -42,10 +40,6 @@ class PetDescriptionViewController: UIViewController {
             self.petAge.text = formatterPet.formattedAge(ageInMonths: pet.ageInMonths)
             self.petGenreIcon.image = UIImage(named: formatterGenre.getGenreImageName(genre: pet.genre, shouldUseDarkImage: true))
         }
-    }
-    
-    @IBAction private func backToPetList(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
     }
     
     private func setupInformationBox() {
@@ -61,6 +55,10 @@ class PetDescriptionViewController: UIViewController {
         petMainInformationBox.layer.shadowRadius = 4
         petMainInformationBox.layer.shadowOpacity = 0.1
         petMainInformationBox.layer.shadowColor = UIColor.gray.cgColor
+    }
+    
+    @IBAction private func backToPetList(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction private func tapAdoptionPet(_ sender: Any) {
