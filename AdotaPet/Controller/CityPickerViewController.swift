@@ -7,14 +7,35 @@
 
 import UIKit
 
-class CityPickerViewController: UIViewController {
-    
+class CityPickerViewController: UIViewController, UITableViewDataSource {
+
     let listOfCities = City.allCases
+    var selectedCity: City?
     
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(listOfCities)
+        tableView.dataSource = self
+    }
+    
+    // MARK: - Data Source
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listOfCities.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        
+        let currentCity = listOfCities[indexPath.row]
+        cell.textLabel?.text = currentCity.cityDescription
+        
+        if currentCity == selectedCity {
+            cell.accessoryType = .checkmark
+        }
+
+        return cell
     }
     
     

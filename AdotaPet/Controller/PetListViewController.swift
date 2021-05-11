@@ -15,6 +15,7 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
     @IBOutlet private weak var imageUser: UIImageView!
     
     private let petList: Array<Pet> = PetDAO().returnAllPets()
+    private var selectedCity: City = .campinas
     
     override func viewDidLoad() {
         super.viewDidLoad()
