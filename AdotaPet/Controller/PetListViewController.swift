@@ -13,9 +13,10 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
     @IBOutlet private weak var viewLocation: UIView!
     @IBOutlet private weak var imageIcon: UIImageView!
     @IBOutlet private weak var imageUser: UIImageView!
+    @IBOutlet private weak var buttonLocation: UIView!
     
     private let petList: Array<Pet> = PetDAO().returnAllPets()
-    private var selectedCity: City = .campinas
+    private var selectedCity: City = .saoPaulo
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
         petCollection.delegate = self
         setupUserPhoto()
         setupViewLocationBorder()
+        setupTapGestureOnButtonLocation()
     }
     
     // MARK: Collection DataSource
@@ -67,6 +69,23 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
     
     private func setupViewLocationBorder() {
         viewLocation.layer.cornerRadius = 20
+    }
+    
+    // MARK: - Tap Gesture
+    
+    private func setupTapGestureOnButtonLocation() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGestureOnButtonLocation))
+        buttonLocation.addGestureRecognizer(gesture)
+    }
+    
+    @objc private func tapGestureOnButtonLocation() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(identifier: "CityPicker") as! CityPickerViewController
+        
+        controller.selectedCity = selectedCity
+        
+        self.present(controller, animated: true, completion: nil)
+        
     }
     
 }

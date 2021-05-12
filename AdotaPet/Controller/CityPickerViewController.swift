@@ -9,10 +9,10 @@ import UIKit
 
 class CityPickerViewController: UIViewController, UITableViewDataSource {
 
-    let listOfCities = City.allCases
+    private let listOfCities = City.allCases
     var selectedCity: City?
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +37,11 @@ class CityPickerViewController: UIViewController, UITableViewDataSource {
 
         return cell
     }
+    
+    @IBAction private func backToPetList(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     
 }
