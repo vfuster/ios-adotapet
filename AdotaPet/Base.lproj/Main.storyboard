@@ -37,7 +37,7 @@
                                 </constraints>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
-                                    <imageReference key="image" image="chevron.left.circle.fill" catalog="system" symbolScale="large"/>
+                                    <imageReference key="image" image="chevron.down.circle.fill" catalog="system" symbolScale="large"/>
                                 </state>
                                 <connections>
                                     <action selector="backToPetDescription:" destination="10C-k6-WS9" eventType="touchUpInside" id="2ZR-vI-0YE"/>

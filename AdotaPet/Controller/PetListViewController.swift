@@ -16,7 +16,7 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
     @IBOutlet private weak var buttonLocation: UIView!
     
     private let petList: Array<Pet> = PetDAO().returnAllPets()
-    private var selectedCity: City = .saoPaulo
+    private var selectedCity: City = .campinas
     
     override func viewDidLoad() {
         super.viewDidLoad()

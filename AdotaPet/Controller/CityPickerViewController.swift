@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CityPickerViewController: UIViewController, UITableViewDataSource {
+class CityPickerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     private let listOfCities = City.allCases
     var selectedCity: City?
@@ -17,6 +17,7 @@ class CityPickerViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
     // MARK: - Data Source
@@ -33,15 +34,18 @@ class CityPickerViewController: UIViewController, UITableViewDataSource {
         
         if currentCity == selectedCity {
             cell.accessoryType = .checkmark
+            cell.tintColor = UIColor.darkGray
         }
 
         return cell
     }
     
-    @IBAction private func backToPetList(_ sender: Any) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.dismiss(animated: true, completion: nil)
     }
     
     
-    
+    @IBAction private func backToPetList(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
