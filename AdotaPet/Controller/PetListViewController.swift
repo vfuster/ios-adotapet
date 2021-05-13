@@ -7,13 +7,14 @@
 
 import UIKit
 
-class PetListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class PetListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, CityPickerViewControllerDelegate {
     
     @IBOutlet private weak var petCollection: UICollectionView!
     @IBOutlet private weak var viewLocation: UIView!
     @IBOutlet private weak var imageIcon: UIImageView!
     @IBOutlet private weak var imageUser: UIImageView!
     @IBOutlet private weak var buttonLocation: UIView!
+    @IBOutlet private weak var cityLabel: UILabel!
     
     private let petList: Array<Pet> = PetDAO().returnAllPets()
     private var selectedCity: City = .campinas
@@ -25,6 +26,7 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
         setupUserPhoto()
         setupViewLocationBorder()
         setupTapGestureOnButtonLocation()
+        cityLabel.text = selectedCity.cityDescription
     }
     
     // MARK: Collection DataSource
@@ -81,11 +83,15 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
     @objc private func tapGestureOnButtonLocation() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(identifier: "CityPicker") as! CityPickerViewController
-        
         controller.selectedCity = selectedCity
+        controller.delegate = self
         
         self.present(controller, animated: true, completion: nil)
-        
+    }
+    
+    func didChangeSelectedCity(city: City) {
+        selectedCity = city
+        cityLabel.text = selectedCity.cityDescription
     }
     
 }

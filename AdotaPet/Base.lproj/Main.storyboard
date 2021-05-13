@@ -78,7 +78,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfq-Bq-fm7">
                                 <rect key="frame" x="65" y="67" width="269" height="40"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Campinas - SP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WR-pN-RXY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Campinas - SP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WR-pN-RXY">
                                         <rect key="frame" x="88" y="4" width="128" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -225,6 +225,7 @@
                     </view>
                     <connections>
                         <outlet property="buttonLocation" destination="Vfq-Bq-fm7" id="spj-gg-hi2"/>
+                        <outlet property="cityLabel" destination="6WR-pN-RXY" id="DiF-lw-fwu"/>
                         <outlet property="imageIcon" destination="P2S-3V-lGc" id="Lxx-kd-cjs"/>
                         <outlet property="imageUser" destination="Wox-kH-faS" id="wJZ-1u-LJv"/>
                         <outlet property="petCollection" destination="yzR-4v-KXL" id="mev-1X-XpX"/>
