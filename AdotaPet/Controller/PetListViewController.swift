@@ -16,9 +16,11 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
     @IBOutlet private weak var buttonLocation: UIView!
     @IBOutlet private weak var cityLabel: UILabel!
     
-    private let petList: Array<Pet> = PetDAO().returnAllPets()
+    private var petList: Array<Pet> = PetDAO().returnAllPets()
+    private let allPets: [Pet] = PetDAO().returnAllPets()
+
     private var selectedCity: City = .campinas
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         petCollection.dataSource = self
@@ -92,6 +94,18 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
     func didChangeSelectedCity(city: City) {
         selectedCity = city
         cityLabel.text = selectedCity.cityDescription
+        
+        var petListSelectedCity: [Pet] = []
+                
+        for pet in allPets {
+            if selectedCity == pet.city {
+                petListSelectedCity.append(pet)
+            }
+        }
+        petList = petListSelectedCity
+        petCollection.reloadData()
+        
+        
     }
     
 }
