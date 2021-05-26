@@ -9,7 +9,7 @@ import UIKit
 
 class PetDAO {
     
-    func returnAllPets() -> Array<Pet> {
+    func returnAllPetsIn(city: City) -> [Pet] {
        
         let pet01 = Pet(name: "Margot", description: "Uma cachorrinha dócil e muito carinhosa. Ela ama carinho na barriga e sair para passear. Não possui nenhuma deficiencia ou algum tipo de cuidado médico especial! Uma verdadeira amiga para a vida toda" , ageInMonths: 13, breed: "Corgi", adress: "Campinas-SP", category: Category.dog, genre: Genre.female, photoPath: "dog_corgi.jpg", city: .campinas)
         
@@ -23,9 +23,16 @@ class PetDAO {
         
         let pet06 = Pet(name: "Puppy", description: "Um cachorrinho super dócil e muito carinhoso. Ele ama carinho na barriga e sair para passear. Não possui nenhuma deficiencia ou algum tipo de cuidado médico especial! Um verdadeiro amigo para a vida toda.", ageInMonths: 5, breed: "Beagle", adress: "Barretos - SP", category: Category.dog, genre: Genre.female, photoPath: "dog_beagle.jpg", city: .curitiba)
         
-        let petList: Array<Pet> = [pet01, pet02, pet03, pet04, pet05, pet06]
+        let petList: [Pet] = [pet01, pet02, pet03, pet04, pet05, pet06]
         
-        return petList
+        var petsInCitySelected: [Pet] = []
+        
+        for pet in petList {
+            if pet.city == city {
+                petsInCitySelected.append(pet)
+            }
+        }
+        
+        return petsInCitySelected
     }
 }
-
