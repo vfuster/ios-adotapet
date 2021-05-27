@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A09EB72265F2DA6000CFD0C /* PetAgeFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A09EB71265F2DA6000CFD0C /* PetAgeFormatterTests.swift */; };
 		3A5F17572632218900C73888 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F17562632218900C73888 /* heart.png */; };
 		3A5F175A263305B300C73888 /* clock-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F1759263305B300C73888 /* clock-3.png */; };
 		3A5F175D26336FD000C73888 /* left-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F175C26336FD000C73888 /* left-arrow.png */; };
@@ -42,7 +43,20 @@
 		3AD2E7B42638A1C400CF5093 /* RequestAdoptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2E7B32638A1C400CF5093 /* RequestAdoptionViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3A09EB6A265F2D1B000CFD0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3ACE5073262A1CA0004C9FF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3ACE507A262A1CA0004C9FF0;
+			remoteInfo = AdotaPet;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3A09EB65265F2D1B000CFD0C /* AdotaPetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdotaPetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A09EB69265F2D1B000CFD0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A09EB71265F2DA6000CFD0C /* PetAgeFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAgeFormatterTests.swift; sourceTree = "<group>"; };
 		3A5F17562632218900C73888 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		3A5F1759263305B300C73888 /* clock-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-3.png"; sourceTree = "<group>"; };
 		3A5F175C26336FD000C73888 /* left-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow.png"; sourceTree = "<group>"; };
@@ -81,6 +95,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3A09EB62265F2D1B000CFD0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3ACE5078262A1CA0004C9FF0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -91,6 +112,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A09EB66265F2D1B000CFD0C /* AdotaPetTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A09EB71265F2DA6000CFD0C /* PetAgeFormatterTests.swift */,
+				3A09EB69265F2D1B000CFD0C /* Info.plist */,
+			);
+			path = AdotaPetTests;
+			sourceTree = "<group>";
+		};
 		3A818AC6263F7733001644F8 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				3ACE507D262A1CA0004C9FF0 /* AdotaPet */,
+				3A09EB66265F2D1B000CFD0C /* AdotaPetTests */,
 				3ACE507C262A1CA0004C9FF0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				3ACE507B262A1CA0004C9FF0 /* AdotaPet.app */,
+				3A09EB65265F2D1B000CFD0C /* AdotaPetTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -207,6 +239,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3A09EB64265F2D1B000CFD0C /* AdotaPetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A09EB6E265F2D1B000CFD0C /* Build configuration list for PBXNativeTarget "AdotaPetTests" */;
+			buildPhases = (
+				3A09EB61265F2D1B000CFD0C /* Sources */,
+				3A09EB62265F2D1B000CFD0C /* Frameworks */,
+				3A09EB63265F2D1B000CFD0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A09EB6B265F2D1B000CFD0C /* PBXTargetDependency */,
+			);
+			name = AdotaPetTests;
+			productName = AdotaPetTests;
+			productReference = 3A09EB65265F2D1B000CFD0C /* AdotaPetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3ACE507A262A1CA0004C9FF0 /* AdotaPet */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ACE508F262A1CA1004C9FF0 /* Build configuration list for PBXNativeTarget "AdotaPet" */;
@@ -233,6 +283,10 @@
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					3A09EB64265F2D1B000CFD0C = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 3ACE507A262A1CA0004C9FF0;
+					};
 					3ACE507A262A1CA0004C9FF0 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -252,11 +306,19 @@
 			projectRoot = "";
 			targets = (
 				3ACE507A262A1CA0004C9FF0 /* AdotaPet */,
+				3A09EB64265F2D1B000CFD0C /* AdotaPetTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3A09EB63265F2D1B000CFD0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3ACE5079262A1CA0004C9FF0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,6 +349,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3A09EB61265F2D1B000CFD0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A09EB72265F2DA6000CFD0C /* PetAgeFormatterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3ACE5077262A1CA0004C9FF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,6 +379,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3A09EB6B265F2D1B000CFD0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3ACE507A262A1CA0004C9FF0 /* AdotaPet */;
+			targetProxy = 3A09EB6A265F2D1B000CFD0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		3ACE5084262A1CA0004C9FF0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -329,6 +407,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3A09EB6C265F2D1B000CFD0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AdotaPetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.valeriafuster.AdotaPetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdotaPet.app/AdotaPet";
+			};
+			name = Debug;
+		};
+		3A09EB6D265F2D1B000CFD0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AdotaPetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.valeriafuster.AdotaPetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdotaPet.app/AdotaPet";
+			};
+			name = Release;
+		};
 		3ACE508D262A1CA1004C9FF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -484,6 +600,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3A09EB6E265F2D1B000CFD0C /* Build configuration list for PBXNativeTarget "AdotaPetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A09EB6C265F2D1B000CFD0C /* Debug */,
+				3A09EB6D265F2D1B000CFD0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3ACE5076262A1CA0004C9FF0 /* Build configuration list for PBXProject "AdotaPet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

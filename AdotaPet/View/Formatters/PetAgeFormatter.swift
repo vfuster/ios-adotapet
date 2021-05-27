@@ -22,6 +22,5 @@ class PetAgeFormatter {
                 return "\(ageInYears) anos"
             }
         }
-        
     }
 }
