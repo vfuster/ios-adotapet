@@ -19,6 +19,7 @@ class PetDescriptionViewController: UIViewController {
     @IBOutlet private weak var petMainInformationBox: UIView!
     
     var selectedPet: Pet?
+    private let router = RouterFactory()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,10 +63,12 @@ class PetDescriptionViewController: UIViewController {
     }
     
     @IBAction private func tapAdoptionPet(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(identifier: "RequestAdoption") as! RequestAdoptionViewController
-        controller.petToBeAdopted = selectedPet
+        guard let pet = selectedPet else { return }
+        
+        let controller = router.makeRequestAdoption(selectedPet: pet)
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }
+
+

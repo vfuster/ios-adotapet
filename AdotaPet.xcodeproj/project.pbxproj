@@ -14,6 +14,7 @@
 		3A5F175D26336FD000C73888 /* left-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F175C26336FD000C73888 /* left-arrow.png */; };
 		3A5F1761263373C400C73888 /* male-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F175F263373C400C73888 /* male-dark.png */; };
 		3A5F1762263373C400C73888 /* female-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F1760263373C400C73888 /* female-dark.png */; };
+		3A66CE6A2662E5FB0094BCEE /* RouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A66CE692662E5FB0094BCEE /* RouterFactory.swift */; };
 		3A818AC8263F774B001644F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A818AC7263F774B001644F8 /* Colors.swift */; };
 		3A892D092648C4350071231C /* CityPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A892D082648C4350071231C /* CityPickerViewController.swift */; };
 		3A892D0D2648C5920071231C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A892D0C2648C5920071231C /* City.swift */; };
@@ -64,6 +65,7 @@
 		3A5F175C26336FD000C73888 /* left-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow.png"; sourceTree = "<group>"; };
 		3A5F175F263373C400C73888 /* male-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "male-dark.png"; sourceTree = "<group>"; };
 		3A5F1760263373C400C73888 /* female-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "female-dark.png"; sourceTree = "<group>"; };
+		3A66CE692662E5FB0094BCEE /* RouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFactory.swift; sourceTree = "<group>"; };
 		3A818AC7263F774B001644F8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3A892D082648C4350071231C /* CityPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPickerViewController.swift; sourceTree = "<group>"; };
 		3A892D0C2648C5920071231C /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
@@ -124,6 +126,14 @@
 			path = AdotaPetTests;
 			sourceTree = "<group>";
 		};
+		3A66CE682662E5D70094BCEE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3A66CE692662E5FB0094BCEE /* RouterFactory.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		3A818AC6263F7733001644F8 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +190,7 @@
 		3ACE5094262A1CCB004C9FF0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3A66CE682662E5D70094BCEE /* Router */,
 				3A818AC6263F7733001644F8 /* Theme */,
 				3ACE50BC262A4B61004C9FF0 /* Formatters */,
 				3ACE50A3262A22AF004C9FF0 /* PetListCollectionViewCell.swift */,
@@ -369,6 +380,7 @@
 				3A818AC8263F774B001644F8 /* Colors.swift in Sources */,
 				3ACE509B262A1D5B004C9FF0 /* PetDao.swift in Sources */,
 				3ACE50A1262A20F3004C9FF0 /* PetListViewController.swift in Sources */,
+				3A66CE6A2662E5FB0094BCEE /* RouterFactory.swift in Sources */,
 				3ACE5098262A1CEF004C9FF0 /* Pet.swift in Sources */,
 				3ACE50D6262E313F004C9FF0 /* PetDescriptionViewController.swift in Sources */,
 				3ACE507F262A1CA0004C9FF0 /* AppDelegate.swift in Sources */,

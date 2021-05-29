@@ -18,6 +18,7 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
     
     private var petList: Array<Pet> = PetDAO().returnAllPetsIn(city: .campinas)
     private var selectedCity: City = .campinas
+    private let router = RouterFactory()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,9 +56,7 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
     // MARK: Collection Delegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let pet = petList[indexPath.item]
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(identifier: "PetDescription") as! PetDescriptionViewController
-        controller.selectedPet = pet
+        let controller = router.makePetDescription(pet: pet)
         let navigationController = UINavigationController(rootViewController: controller)
         navigationController.isNavigationBarHidden = true
         
@@ -74,18 +73,13 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     // MARK: - Tap Gesture
-    
     private func setupTapGestureOnButtonLocation() {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGestureOnButtonLocation))
         buttonLocation.addGestureRecognizer(gesture)
     }
     
     @objc private func tapGestureOnButtonLocation() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(identifier: "CityPicker") as! CityPickerViewController
-        controller.selectedCity = selectedCity
-        controller.delegate = self
-        
+        let controller = router.makeCityPicker(selectedCity: selectedCity, delegate: self)
         self.present(controller, animated: true, completion: nil)
     }
     
