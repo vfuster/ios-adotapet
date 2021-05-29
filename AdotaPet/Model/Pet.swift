@@ -13,18 +13,16 @@ class Pet {
     let description: String
     let ageInMonths: Int
     let breed: String
-    let address: String
     let category: Category
     let genre: Genre
     let photoPath: String
     let city: City
     
-    init(name: String, description: String, ageInMonths: Int, breed: String, adress: String, category: Category, genre: Genre, photoPath: String, city: City) {
+    init(name: String, description: String, ageInMonths: Int, breed: String, category: Category, genre: Genre, photoPath: String, city: City) {
         self.name = name
         self.description = description
         self.ageInMonths = ageInMonths
         self.breed = breed
-        self.address = adress
         self.category = category
         self.genre = genre
         self.photoPath = photoPath
