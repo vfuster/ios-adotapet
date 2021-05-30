@@ -23,7 +23,13 @@ class PetDAO {
         
         let pet06 = Pet(name: "Puppy", description: "Um cachorrinho super dócil e muito carinhoso. Ele ama carinho na barriga e sair para passear. Não possui nenhuma deficiencia ou algum tipo de cuidado médico especial! Um verdadeiro amigo para a vida toda.", ageInMonths: 5, breed: "Beagle", category: Category.dog, genre: Genre.female, photoPath: "dog_beagle.jpg", city: .curitiba)
         
-        let petList: [Pet] = [pet01, pet02, pet03, pet04, pet05, pet06]
+        let pet07 = Pet(name: "Adamastor", description: "Eu sou um doguinho muito gente boa! Amo correr atrás de bolinhas, tenho um inimigo número 1...os chinelos de borracha, não posso ver um que já mordo ele inteiro! E ai vamos nos conhecer, promete te proteger do malignos chinelos", ageInMonths: 5, breed: "Shiba inu", category: Category.dog, genre: .male, photoPath: "shiba_inu.jpg", city: .rioDeJaneiro)
+        
+        let pet08 = Pet(name: "Bianco", description: "Olá, sou o famoso gatinho branco igual a neve. Sou super companheiro, adoro um pate, amassar pãozinho e tirar uma sonequinha das 10h até ás 18h é o meu hobbie preferido. E ai vamos ser grandes parceiros de sonecas aos domingos?", ageInMonths: 4, breed: "Khao Manee", category: Category.cat, genre: .male, photoPath: "white_cat.jpg", city: .saoPaulo)
+        
+        let pet09 = Pet(name: "Peralta", description: "Olá, como o meu nome já diz...sou uma menina super arteira, adora brincar com todo mundo! Bolinha amarelas são a minhas favoritas. Me adota! Tenho certeza que vamos brincar muito!", ageInMonths: 20, breed: "Cocker Spaniel", category:Category.dog, genre: .female, photoPath: "peralta.jpg", city:.campinas)
+        
+        let petList: [Pet] = [pet01, pet02, pet03, pet04, pet05, pet06, pet07, pet08, pet09]
         
         var petsInCitySelected: [Pet] = []
         

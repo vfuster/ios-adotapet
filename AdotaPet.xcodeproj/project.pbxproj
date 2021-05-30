@@ -17,6 +17,9 @@
 		3A66CE6A2662E5FB0094BCEE /* RouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A66CE692662E5FB0094BCEE /* RouterFactory.swift */; };
 		3A66CE722662FBD40094BCEE /* RouterFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A66CE712662FBD40094BCEE /* RouterFactoryTests.swift */; };
 		3A66CE792663104F0094BCEE /* CityPickerViewControllerDelegateDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A66CE782663104F0094BCEE /* CityPickerViewControllerDelegateDummy.swift */; };
+		3A66CE83266420800094BCEE /* shiba_inu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A66CE82266420800094BCEE /* shiba_inu.jpg */; };
+		3A66CE872664223F0094BCEE /* white_cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A66CE862664223F0094BCEE /* white_cat.jpg */; };
+		3A66CE8B266424180094BCEE /* peralta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A66CE8A266424180094BCEE /* peralta.jpg */; };
 		3A818AC8263F774B001644F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A818AC7263F774B001644F8 /* Colors.swift */; };
 		3A892D092648C4350071231C /* CityPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A892D082648C4350071231C /* CityPickerViewController.swift */; };
 		3A892D0D2648C5920071231C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A892D0C2648C5920071231C /* City.swift */; };
@@ -70,6 +73,9 @@
 		3A66CE692662E5FB0094BCEE /* RouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFactory.swift; sourceTree = "<group>"; };
 		3A66CE712662FBD40094BCEE /* RouterFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFactoryTests.swift; sourceTree = "<group>"; };
 		3A66CE782663104F0094BCEE /* CityPickerViewControllerDelegateDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPickerViewControllerDelegateDummy.swift; sourceTree = "<group>"; };
+		3A66CE82266420800094BCEE /* shiba_inu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shiba_inu.jpg; sourceTree = "<group>"; };
+		3A66CE862664223F0094BCEE /* white_cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = white_cat.jpg; sourceTree = "<group>"; };
+		3A66CE8A266424180094BCEE /* peralta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = peralta.jpg; sourceTree = "<group>"; };
 		3A818AC7263F774B001644F8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3A892D082648C4350071231C /* CityPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPickerViewController.swift; sourceTree = "<group>"; };
 		3A892D0C2648C5920071231C /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
@@ -242,6 +248,9 @@
 				3A5F1760263373C400C73888 /* female-dark.png */,
 				3A5F175F263373C400C73888 /* male-dark.png */,
 				3ACE50CC262E2461004C9FF0 /* user_avatar.jpeg */,
+				3A66CE82266420800094BCEE /* shiba_inu.jpg */,
+				3A66CE8A266424180094BCEE /* peralta.jpg */,
+				3A66CE862664223F0094BCEE /* white_cat.jpg */,
 				3ACE50C2262A5C4D004C9FF0 /* clock.png */,
 				3ACE50C3262A5C4D004C9FF0 /* female-light.png */,
 				3ACE50C1262A5C4D004C9FF0 /* male-light.png */,
@@ -369,6 +378,9 @@
 				3ACE5086262A1CA0004C9FF0 /* Main.storyboard in Resources */,
 				3A5F175D26336FD000C73888 /* left-arrow.png in Resources */,
 				3ACE50B1262A3AEB004C9FF0 /* cat_smile.jpg in Resources */,
+				3A66CE8B266424180094BCEE /* peralta.jpg in Resources */,
+				3A66CE872664223F0094BCEE /* white_cat.jpg in Resources */,
+				3A66CE83266420800094BCEE /* shiba_inu.jpg in Resources */,
 				3ACE50C6262A5C4D004C9FF0 /* female-light.png in Resources */,
 				3A5F175A263305B300C73888 /* clock-3.png in Resources */,
 			);
