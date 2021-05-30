@@ -12,14 +12,14 @@ class RouterFactory {
     
     private let storyboard = UIStoryboard(name: "Main", bundle: nil)
     
-    func makePetDescription(pet: Pet) -> UIViewController {
+    func makePetDescription(pet: Pet) -> PetDescriptionViewController {
         let controller = storyboard.instantiateViewController(identifier: "PetDescription") as! PetDescriptionViewController
         controller.selectedPet = pet
         
         return controller
     }
     
-    func makeCityPicker(selectedCity: City, delegate: CityPickerViewControllerDelegate) -> UIViewController {
+    func makeCityPicker(selectedCity: City, delegate: CityPickerViewControllerDelegate) -> CityPickerViewController {
         let controller = storyboard.instantiateViewController(identifier: "CityPicker") as! CityPickerViewController
         
         controller.selectedCity = selectedCity
@@ -28,7 +28,7 @@ class RouterFactory {
         return controller
     }
     
-    func makeRequestAdoption(selectedPet: Pet) -> UIViewController {
+    func makeRequestAdoption(selectedPet: Pet) -> RequestAdoptionViewController {
         let controller = storyboard.instantiateViewController(identifier: "RequestAdoption") as! RequestAdoptionViewController
         
         controller.petToBeAdopted = selectedPet

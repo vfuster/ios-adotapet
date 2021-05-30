@@ -15,6 +15,8 @@
 		3A5F1761263373C400C73888 /* male-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F175F263373C400C73888 /* male-dark.png */; };
 		3A5F1762263373C400C73888 /* female-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F1760263373C400C73888 /* female-dark.png */; };
 		3A66CE6A2662E5FB0094BCEE /* RouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A66CE692662E5FB0094BCEE /* RouterFactory.swift */; };
+		3A66CE722662FBD40094BCEE /* RouterFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A66CE712662FBD40094BCEE /* RouterFactoryTests.swift */; };
+		3A66CE792663104F0094BCEE /* CityPickerViewControllerDelegateDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A66CE782663104F0094BCEE /* CityPickerViewControllerDelegateDummy.swift */; };
 		3A818AC8263F774B001644F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A818AC7263F774B001644F8 /* Colors.swift */; };
 		3A892D092648C4350071231C /* CityPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A892D082648C4350071231C /* CityPickerViewController.swift */; };
 		3A892D0D2648C5920071231C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A892D0C2648C5920071231C /* City.swift */; };
@@ -66,6 +68,8 @@
 		3A5F175F263373C400C73888 /* male-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "male-dark.png"; sourceTree = "<group>"; };
 		3A5F1760263373C400C73888 /* female-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "female-dark.png"; sourceTree = "<group>"; };
 		3A66CE692662E5FB0094BCEE /* RouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFactory.swift; sourceTree = "<group>"; };
+		3A66CE712662FBD40094BCEE /* RouterFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFactoryTests.swift; sourceTree = "<group>"; };
+		3A66CE782663104F0094BCEE /* CityPickerViewControllerDelegateDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPickerViewControllerDelegateDummy.swift; sourceTree = "<group>"; };
 		3A818AC7263F774B001644F8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3A892D082648C4350071231C /* CityPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPickerViewController.swift; sourceTree = "<group>"; };
 		3A892D0C2648C5920071231C /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
@@ -119,8 +123,10 @@
 		3A09EB66265F2D1B000CFD0C /* AdotaPetTests */ = {
 			isa = PBXGroup;
 			children = (
+				3A66CE772663102D0094BCEE /* Dummy */,
 				3A09EB71265F2DA6000CFD0C /* PetAgeFormatterTests.swift */,
 				3A4DB2AB266088B900C92BF6 /* PetGenreFormatterTests.swift */,
+				3A66CE712662FBD40094BCEE /* RouterFactoryTests.swift */,
 				3A09EB69265F2D1B000CFD0C /* Info.plist */,
 			);
 			path = AdotaPetTests;
@@ -132,6 +138,14 @@
 				3A66CE692662E5FB0094BCEE /* RouterFactory.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		3A66CE772663102D0094BCEE /* Dummy */ = {
+			isa = PBXGroup;
+			children = (
+				3A66CE782663104F0094BCEE /* CityPickerViewControllerDelegateDummy.swift */,
+			);
+			path = Dummy;
 			sourceTree = "<group>";
 		};
 		3A818AC6263F7733001644F8 /* Theme */ = {
@@ -369,6 +383,8 @@
 			files = (
 				3A4DB2AC266088B900C92BF6 /* PetGenreFormatterTests.swift in Sources */,
 				3A09EB72265F2DA6000CFD0C /* PetAgeFormatterTests.swift in Sources */,
+				3A66CE722662FBD40094BCEE /* RouterFactoryTests.swift in Sources */,
+				3A66CE792663104F0094BCEE /* CityPickerViewControllerDelegateDummy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

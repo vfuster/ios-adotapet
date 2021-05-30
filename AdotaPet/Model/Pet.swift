@@ -7,8 +7,8 @@
 
 import UIKit
 
-class Pet {
-
+class Pet: Equatable {
+    
     let name: String
     let description: String
     let ageInMonths: Int
@@ -27,6 +27,17 @@ class Pet {
         self.genre = genre
         self.photoPath = photoPath
         self.city = city
+    }
+    
+    static func == (lhs: Pet, rhs: Pet) -> Bool {
+        return lhs.name == rhs.name &&
+            lhs.description == rhs.description &&
+            lhs.ageInMonths == rhs.ageInMonths &&
+            lhs.breed == rhs.breed &&
+            lhs.category == rhs.category &&
+            lhs.genre == rhs.genre &&
+            lhs.photoPath == rhs.photoPath &&
+            lhs.city == rhs.city
     }
     
 }
