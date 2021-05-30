@@ -20,6 +20,7 @@
 		3A66CE83266420800094BCEE /* shiba_inu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A66CE82266420800094BCEE /* shiba_inu.jpg */; };
 		3A66CE872664223F0094BCEE /* white_cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A66CE862664223F0094BCEE /* white_cat.jpg */; };
 		3A66CE8B266424180094BCEE /* peralta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A66CE8A266424180094BCEE /* peralta.jpg */; };
+		3A66CEAC26642D360094BCEE /* PetDaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A66CEAB26642D360094BCEE /* PetDaoTests.swift */; };
 		3A818AC8263F774B001644F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A818AC7263F774B001644F8 /* Colors.swift */; };
 		3A892D092648C4350071231C /* CityPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A892D082648C4350071231C /* CityPickerViewController.swift */; };
 		3A892D0D2648C5920071231C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A892D0C2648C5920071231C /* City.swift */; };
@@ -76,6 +77,7 @@
 		3A66CE82266420800094BCEE /* shiba_inu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shiba_inu.jpg; sourceTree = "<group>"; };
 		3A66CE862664223F0094BCEE /* white_cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = white_cat.jpg; sourceTree = "<group>"; };
 		3A66CE8A266424180094BCEE /* peralta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = peralta.jpg; sourceTree = "<group>"; };
+		3A66CEAB26642D360094BCEE /* PetDaoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDaoTests.swift; sourceTree = "<group>"; };
 		3A818AC7263F774B001644F8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3A892D082648C4350071231C /* CityPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPickerViewController.swift; sourceTree = "<group>"; };
 		3A892D0C2648C5920071231C /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				3A66CE772663102D0094BCEE /* Dummy */,
 				3A09EB71265F2DA6000CFD0C /* PetAgeFormatterTests.swift */,
 				3A4DB2AB266088B900C92BF6 /* PetGenreFormatterTests.swift */,
+				3A66CEAB26642D360094BCEE /* PetDaoTests.swift */,
 				3A66CE712662FBD40094BCEE /* RouterFactoryTests.swift */,
 				3A09EB69265F2D1B000CFD0C /* Info.plist */,
 			);
@@ -393,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A66CEAC26642D360094BCEE /* PetDaoTests.swift in Sources */,
 				3A4DB2AC266088B900C92BF6 /* PetGenreFormatterTests.swift in Sources */,
 				3A09EB72265F2DA6000CFD0C /* PetAgeFormatterTests.swift in Sources */,
 				3A66CE722662FBD40094BCEE /* RouterFactoryTests.swift in Sources */,
