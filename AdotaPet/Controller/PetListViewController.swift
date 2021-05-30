@@ -28,6 +28,11 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
         setupViewLocationBorder()
         setupTapGestureOnButtonLocation()
         cityLabel.text = selectedCity.cityDescription
+        
+        let xib = UINib(nibName: "PetListCollectionViewCell", bundle: nil)
+        let identifier = "PetListCollectionViewCell"
+        petCollection.register(xib, forCellWithReuseIdentifier: identifier)
+        
     }
     
     // MARK: Collection DataSource
@@ -37,7 +42,7 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let petCell = collectionView.dequeueReusableCell(withReuseIdentifier: "petCell", for: indexPath) as! PetListCollectionViewCell
+        let petCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PetListCollectionViewCell", for: indexPath) as! PetListCollectionViewCell
         
         let currentPet = petList[indexPath.item]
         petCell.configure(with: currentPet)

@@ -24,7 +24,7 @@ class PetListCollectionViewCell: UICollectionViewCell {
         labelBreed.text = pet.breed
         labelGenre.text = formatterGenre.getGenreText(genre: pet.genre)
         iconGenre.image = UIImage(named: formatterGenre.getGenreImageName(genre: pet.genre, shouldUseDarkImage: false))
-        labelAge.text = formatterPet.formattedAge(ageInMonths: pet.ageInMonths)
+    labelAge.text = formatterPet.formattedAge(ageInMonths: pet.ageInMonths)
         imagePet.image = UIImage(named: pet.photoPath)
         
         layer.cornerRadius = 25

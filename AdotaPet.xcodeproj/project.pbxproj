@@ -21,6 +21,8 @@
 		3A66CE872664223F0094BCEE /* white_cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A66CE862664223F0094BCEE /* white_cat.jpg */; };
 		3A66CE8B266424180094BCEE /* peralta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A66CE8A266424180094BCEE /* peralta.jpg */; };
 		3A66CEAC26642D360094BCEE /* PetDaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A66CEAB26642D360094BCEE /* PetDaoTests.swift */; };
+		3A66CEB2266446E80094BCEE /* PetListCollectionViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A66CEB1266446E80094BCEE /* PetListCollectionViewCellTest.swift */; };
+		3A66CEB826644EBC0094BCEE /* PetListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A66CEB726644EBC0094BCEE /* PetListCollectionViewCell.xib */; };
 		3A818AC8263F774B001644F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A818AC7263F774B001644F8 /* Colors.swift */; };
 		3A892D092648C4350071231C /* CityPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A892D082648C4350071231C /* CityPickerViewController.swift */; };
 		3A892D0D2648C5920071231C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A892D0C2648C5920071231C /* City.swift */; };
@@ -78,6 +80,8 @@
 		3A66CE862664223F0094BCEE /* white_cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = white_cat.jpg; sourceTree = "<group>"; };
 		3A66CE8A266424180094BCEE /* peralta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = peralta.jpg; sourceTree = "<group>"; };
 		3A66CEAB26642D360094BCEE /* PetDaoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDaoTests.swift; sourceTree = "<group>"; };
+		3A66CEB1266446E80094BCEE /* PetListCollectionViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetListCollectionViewCellTest.swift; sourceTree = "<group>"; };
+		3A66CEB726644EBC0094BCEE /* PetListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetListCollectionViewCell.xib; sourceTree = "<group>"; };
 		3A818AC7263F774B001644F8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3A892D082648C4350071231C /* CityPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPickerViewController.swift; sourceTree = "<group>"; };
 		3A892D0C2648C5920071231C /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 			children = (
 				3A66CE772663102D0094BCEE /* Dummy */,
 				3A09EB71265F2DA6000CFD0C /* PetAgeFormatterTests.swift */,
+				3A66CEB1266446E80094BCEE /* PetListCollectionViewCellTest.swift */,
 				3A4DB2AB266088B900C92BF6 /* PetGenreFormatterTests.swift */,
 				3A66CEAB26642D360094BCEE /* PetDaoTests.swift */,
 				3A66CE712662FBD40094BCEE /* RouterFactoryTests.swift */,
@@ -217,6 +222,7 @@
 				3A818AC6263F7733001644F8 /* Theme */,
 				3ACE50BC262A4B61004C9FF0 /* Formatters */,
 				3ACE50A3262A22AF004C9FF0 /* PetListCollectionViewCell.swift */,
+				3A66CEB726644EBC0094BCEE /* PetListCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 			files = (
 				3A5F1761263373C400C73888 /* male-dark.png in Resources */,
 				3A5F17572632218900C73888 /* heart.png in Resources */,
+				3A66CEB826644EBC0094BCEE /* PetListCollectionViewCell.xib in Resources */,
 				3ACE50D0262E28B1004C9FF0 /* board.png in Resources */,
 				3A5F1762263373C400C73888 /* female-dark.png in Resources */,
 				3ACE50AE262A3AEB004C9FF0 /* dog_salsicha.jpg in Resources */,
@@ -398,6 +405,7 @@
 			files = (
 				3A66CEAC26642D360094BCEE /* PetDaoTests.swift in Sources */,
 				3A4DB2AC266088B900C92BF6 /* PetGenreFormatterTests.swift in Sources */,
+				3A66CEB2266446E80094BCEE /* PetListCollectionViewCellTest.swift in Sources */,
 				3A09EB72265F2DA6000CFD0C /* PetAgeFormatterTests.swift in Sources */,
 				3A66CE722662FBD40094BCEE /* RouterFactoryTests.swift in Sources */,
 				3A66CE792663104F0094BCEE /* CityPickerViewControllerDelegateDummy.swift in Sources */,
