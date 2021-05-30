@@ -28,11 +28,13 @@ class PetListViewController: UIViewController, UICollectionViewDataSource, UICol
         setupViewLocationBorder()
         setupTapGestureOnButtonLocation()
         cityLabel.text = selectedCity.cityDescription
-        
+        registerCell()
+    }
+    
+    private func registerCell() {
         let xib = UINib(nibName: "PetListCollectionViewCell", bundle: nil)
         let identifier = "PetListCollectionViewCell"
         petCollection.register(xib, forCellWithReuseIdentifier: identifier)
-        
     }
     
     // MARK: Collection DataSource
