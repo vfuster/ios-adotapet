@@ -2,8 +2,12 @@
 
 O AdotaPet surgiu para facilitar a adoção de animais, no app é possível filtrar pets por cidade, visualizar seus detalhes (foto, descrição, idade e gênero) e solicitar a adoção a partir de um formulário que exibe os requisitos para tal.
 
+## Evidências 
+
+> A layout foi inspirado no projeto Pet Adoption App criado por Julia Tikhiy-Tishchenko. Disponível no [Dribbble](https://dribbble.com/shots/10957059-Pet-Adoption-App)
+
 ## Arquitetura 🏗
-O projeto foi criado utilizando a arquitetura MVC (Model View Controller). Além para a criação de telas usadas na navegação é responsabilidade de uma Factory. A camada de apresentação utiliza Formatters.
+O projeto foi criado utilizando a arquitetura MVC (Model View Controller). Além disso, a criação de telas usadas na navegação é responsabilidade de uma Factory. A camada de apresentação utiliza Formatters.
 
 ## Testes ✅
 
