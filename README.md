@@ -21,6 +21,13 @@ O projeto possui teste unitários que são responsáveis por garantir o funciona
 Os ViewControllers não possuem testes.
 
 ## Melhorias ✨
+- Refatorar ViewControllers para adicionar testes;
+- Adicionar suporte a internacionalização;
+- Suportar iPad;
+- Adicionar novas features:
+  - Busca por tipo de animal;
+  - Adicionar animais aos favoritos;
+  - Adicionar tela de perfil;
 
 ## License 
 MIT.
