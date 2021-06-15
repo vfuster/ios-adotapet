@@ -5,7 +5,7 @@ O AdotaPet surgiu para facilitar a adoção de animais, no app é possível filt
 ## Evidências 
 ![Imagens do Projeto](https://github.com/vfuster/ios-adotapet/blob/main/adotaPet-image.png?raw=true)
 
-Confira o video do projeto no [Youtube](https://youtu.be/IZC3qsX_v2M)
+Confira o vídeo do projeto no [Youtube](https://youtu.be/IZC3qsX_v2M)
 
 > A layout foi inspirado no projeto Pet Adoption App criado por Julia Tikhiy-Tishchenko. Disponível no [Dribbble](https://dribbble.com/shots/10957059-Pet-Adoption-App)
 
